@@ -603,6 +603,82 @@ img { max-width: 100%; display: block; }
 }
 
 /* =============================================
+   REVIEWS
+   ============================================= */
+.reviews {
+  padding: 100px 0;
+  background: linear-gradient(160deg, #1a0e06 0%, #0d0d0d 100%);
+}
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.review__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.review__card:hover {
+  border-color: rgba(212,104,42,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+}
+.review__stars {
+  color: #F4A940;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.review__text {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  flex: 1;
+  font-style: italic;
+}
+.review__footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+.review__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.review__name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.review__source {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+.reviews__cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* =============================================
    HOURS & LOCATION
    ============================================= */
 .hours {
