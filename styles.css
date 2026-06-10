@@ -479,6 +479,88 @@ img { max-width: 100%; display: block; }
   margin-bottom: 8px;
 }
 
+/* Inline price display (single price) */
+.menu__item-price {
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+}
+
+/* Multi-size price row (calzone / 12" / 16") */
+.menu__item-prices {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  flex-wrap: wrap;
+}
+.menu__price-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__price-size {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.menu__price-amt {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  font-family: var(--font-serif);
+}
+.menu__price-div {
+  color: var(--color-border);
+  font-size: 0.9rem;
+  align-self: center;
+  margin-bottom: 2px;
+}
+
+/* BYO tier pricing table (inside the BYO card) */
+.byo-tier-table {
+  width: 100%;
+  margin: 14px 0;
+  font-size: 0.78rem;
+}
+.byo-tier-header, .byo-tier-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  padding: 5px 8px;
+}
+.byo-tier-header {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+}
+.byo-tier-row span:first-child {
+  text-align: left;
+  color: var(--color-text-muted);
+}
+.byo-tier-row span:not(:first-child) {
+  text-align: center;
+  color: var(--color-accent-gold);
+  font-weight: 600;
+}
+.byo-tier-row--note span {
+  color: var(--color-text-muted) !important;
+  font-style: italic;
+  font-size: 0.72rem;
+}
+
 /* =============================================
    HOURS & LOCATION
    ============================================= */
@@ -543,9 +625,9 @@ img { max-width: 100%; display: block; }
 }
 .contact__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  max-width: 820px;
+  max-width: 1060px;
   margin: 0 auto;
 }
 .contact__card {
@@ -619,7 +701,7 @@ img { max-width: 100%; display: block; }
   .about__badge { bottom: -16px; left: 16px; }
   .hours__grid { grid-template-columns: 1fr; }
   .hours__map { height: 320px; }
-  .contact__cards { grid-template-columns: 1fr; max-width: 420px; }
+  .contact__cards { grid-template-columns: repeat(2, 1fr); max-width: 560px; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }
 }
@@ -654,4 +736,201 @@ img { max-width: 100%; display: block; }
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
   .about, .menu, .hours, .contact { padding: 72px 0; }
+  .contact__cards { grid-template-columns: 1fr; max-width: 360px; }
+}
+
+/* =============================================
+   BUILD YOUR OWN PIZZA MODAL
+   ============================================= */
+.byo-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.byo-modal.open { display: flex; }
+
+.byo-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.78);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.byo-modal__panel {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 660px;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+.byo-modal__panel::-webkit-scrollbar { width: 6px; }
+.byo-modal__panel::-webkit-scrollbar-track { background: transparent; }
+.byo-modal__panel::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+
+.byo-modal__close {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin: 16px 20px 0 auto;
+  display: block;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), border-color var(--transition);
+  z-index: 1;
+}
+.byo-modal__close:hover { color: var(--color-text); border-color: var(--color-accent); }
+
+.byo-modal__header {
+  padding: 8px 32px 24px;
+  text-align: center;
+  clear: both;
+}
+.byo-modal__icon {
+  font-size: 1.8rem;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+.byo-modal__title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+.byo-modal__sub {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.byo-modal__body {
+  padding: 0 32px 8px;
+  flex: 1;
+}
+
+.byo-section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+.byo-section:last-child { border-bottom: none; margin-bottom: 0; }
+
+.byo-section__title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.byo-section__note {
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text-muted);
+}
+
+.byo-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.byo-option {
+  position: relative;
+  cursor: pointer;
+}
+.byo-option input[type="radio"],
+.byo-option input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.byo-option__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 14px;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), background var(--transition);
+  cursor: pointer;
+  user-select: none;
+}
+.byo-option__inner:hover {
+  border-color: rgba(212,104,42,0.5);
+}
+.byo-option input:checked + .byo-option__inner {
+  background: rgba(212,104,42,0.14);
+  border-color: var(--color-accent);
+}
+.byo-option__name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+.byo-option__detail {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.byo-modal__footer {
+  position: sticky;
+  bottom: 0;
+  background: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.byo-summary { flex: 1; min-width: 0; }
+.byo-summary__label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: 4px;
+}
+.byo-summary__text {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  line-height: 1.5;
+  word-break: break-word;
+}
+.byo-modal__cta { flex-shrink: 0; }
+
+@media (max-width: 600px) {
+  .byo-modal__panel { max-height: 95vh; border-radius: var(--radius-md); }
+  .byo-modal__header, .byo-modal__body { padding-left: 20px; padding-right: 20px; }
+  .byo-modal__footer { padding: 16px 20px; flex-direction: column; align-items: stretch; }
+  .byo-modal__cta { text-align: center; justify-content: center; }
 }

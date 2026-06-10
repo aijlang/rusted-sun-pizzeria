@@ -30,6 +30,35 @@ tabs.forEach(tab => {
   });
 });
 
+// Build Your Own Pizza Modal
+const byoModal = document.getElementById('byoModal');
+const byoSummaryText = document.getElementById('byoSummaryText');
+
+function updateByoSummary() {
+  const size = byoModal.querySelector('input[name="byo-size"]:checked')?.value || 'Medium (12")';
+  const sauce = byoModal.querySelector('input[name="byo-sauce"]:checked')?.value || 'Marinara';
+  const toppings = [...byoModal.querySelectorAll('input[name="byo-topping"]:checked')].map(i => i.value);
+  let summary = `${size} · ${sauce} sauce · Mozzarella`;
+  if (toppings.length) summary += ` · ${toppings.join(', ')}`;
+  byoSummaryText.textContent = summary;
+}
+
+function openByoModal() {
+  byoModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  updateByoSummary();
+}
+function closeByoModal() {
+  byoModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.byo-open-btn').forEach(btn => btn.addEventListener('click', openByoModal));
+document.getElementById('byoModalClose').addEventListener('click', closeByoModal);
+document.getElementById('byoModalBackdrop').addEventListener('click', closeByoModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeByoModal(); });
+byoModal.querySelectorAll('input').forEach(input => input.addEventListener('change', updateByoSummary));
+
 // Fade-in on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {

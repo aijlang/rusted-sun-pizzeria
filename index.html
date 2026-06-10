@@ -116,6 +116,7 @@
         <button class="menu__tab" data-tab="calzones" role="tab">Calzones</button>
         <button class="menu__tab" data-tab="pasta" role="tab">Pasta</button>
         <button class="menu__tab" data-tab="desserts" role="tab">Desserts</button>
+        <button class="menu__tab" data-tab="beverages" role="tab">Beverages</button>
       </div>
 
       <!-- Starters -->
@@ -123,23 +124,31 @@
         <div class="menu__grid">
           <div class="menu__item">
             <div class="menu__item-header">
-              <h3 class="menu__item-name">Garlic Bread Stix</h3>
-              <span class="menu__item-tag">Fan Favorite</span>
+              <h3 class="menu__item-name">Buffalo Chicken</h3>
+              <span class="menu__item-price">$10.50</span>
             </div>
-            <p class="menu__item-desc">Warm garlic bread sticks served with a side of housemade mozzarella sauce for dipping.</p>
+            <p class="menu__item-desc">Boneless skinless chicken and jalapeños drenched in buffalo sauce (not wings).</p>
           </div>
           <div class="menu__item">
             <div class="menu__item-header">
               <h3 class="menu__item-name">Killer Cheese Dip</h3>
-              <span class="menu__item-tag">Fan Favorite</span>
+              <span class="menu__item-price">$11.50</span>
             </div>
-            <p class="menu__item-desc">Our signature rich, melted cheese dip — perfect for sharing (or not).</p>
+            <p class="menu__item-desc">Artichoke heart, sun-dried tomato, spinach, and three cheeses — served with bread stix.</p>
           </div>
           <div class="menu__item">
             <div class="menu__item-header">
-              <h3 class="menu__item-name">Buffalo Chicken</h3>
+              <h3 class="menu__item-name">Garlic Bread Stix &amp; Sauce</h3>
+              <span class="menu__item-price">$9.25</span>
             </div>
-            <p class="menu__item-desc">Crispy chicken tossed in tangy buffalo sauce. A spicy kick to start your meal.</p>
+            <p class="menu__item-desc">Warm housemade garlic bread sticks with marinara dipping sauce.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Bread Stix with Mozzarella</h3>
+              <span class="menu__item-price">$10.25</span>
+            </div>
+            <p class="menu__item-desc">Our housemade bread sticks topped with melted mozzarella cheese.</p>
           </div>
         </div>
       </div>
@@ -148,92 +157,259 @@
       <div class="menu__panel" id="tab-salads">
         <div class="menu__grid">
           <div class="menu__item">
-            <h3 class="menu__item-name">Garden Salad</h3>
-            <p class="menu__item-desc">Fresh mixed greens, tomato, cucumber, and your choice of dressing.</p>
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Pasta Salad</h3>
+              <span class="menu__item-price">$12.75</span>
+            </div>
+            <p class="menu__item-desc">Penne pasta, salami, Canadian bacon, feta, romano, black &amp; green olive, green &amp; red pepper, fresh tomato, balsamic vinaigrette.</p>
           </div>
           <div class="menu__item">
-            <h3 class="menu__item-name">Dinner Salad</h3>
-            <p class="menu__item-desc">A heartier salad to complement your main — ask your server for today's build.</p>
-          </div>
-          <div class="menu__item">
-            <h3 class="menu__item-name">Italian Salad</h3>
-            <p class="menu__item-desc">Crisp romaine, olives, pepperoncini, red onion, and Italian dressing.</p>
-          </div>
-          <div class="menu__item">
-            <h3 class="menu__item-name">Pasta Salad</h3>
-            <p class="menu__item-desc">Chilled rotini tossed with fresh vegetables and a housemade vinaigrette.</p>
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Garden Salad</h3>
+              <span class="menu__item-price">$11.75</span>
+            </div>
+            <p class="menu__item-desc">Mixed greens, tomato, cucumber, croutons, romano cheese, choice of dressing. Add chicken or shrimp +$0.50.</p>
           </div>
           <div class="menu__item">
             <div class="menu__item-header">
               <h3 class="menu__item-name">Bleu Chicken Salad</h3>
-              <span class="menu__item-tag">House Specialty</span>
+              <span class="menu__item-price">$12.25</span>
             </div>
-            <p class="menu__item-desc">Grilled chicken, bleu cheese crumbles, candied walnuts, and mixed greens with a tangy dressing.</p>
+            <p class="menu__item-desc">Mixed greens, bleu cheese melted over chicken, blanched broccoli, red onion, red pepper, choice of dressing.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Italian Salad</h3>
+              <span class="menu__item-price">$12.75</span>
+            </div>
+            <p class="menu__item-desc">Mixed greens, salami, Canadian bacon, mozzarella, green olive, artichoke heart, green pepper, fresh tomato, choice of dressing.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Dinner Salad</h3>
+              <span class="menu__item-price">$6.50</span>
+            </div>
+            <p class="menu__item-desc">Mixed greens, red onion, red pepper, choice of dressing.</p>
           </div>
         </div>
       </div>
 
       <!-- Pizzas -->
       <div class="menu__panel" id="tab-pizzas">
-        <p class="menu__panel-note">All pizzas available in multiple sizes. Gluten-free crust available upon request.</p>
+        <p class="menu__panel-note">New York-style crust with fresh whole-milk mozzarella. Every pizza also available as a calzone. Gluten-free crust available upon request.</p>
         <div class="menu__grid menu__grid--pizzas">
+
           <div class="menu__item menu__item--featured">
             <div class="menu__item-header">
               <h3 class="menu__item-name">Margherita</h3>
               <span class="menu__item-tag">Classic</span>
             </div>
-            <p class="menu__item-desc">House tomato sauce, fresh mozzarella, whole basil leaves, drizzled with olive oil. Simple perfection.</p>
+            <p class="menu__item-desc">Marinara, mozzarella, fresh basil, fresh tomato.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.75</span></span>
+            </div>
           </div>
+
           <div class="menu__item menu__item--featured">
             <div class="menu__item-header">
               <h3 class="menu__item-name">Bleu Chicken</h3>
               <span class="menu__item-tag">House Specialty</span>
             </div>
-            <p class="menu__item-desc">Ranch base, grilled chicken, bleu cheese crumbles, red onion, and mozzarella.</p>
+            <p class="menu__item-desc">Olive oil, mozzarella, chicken, red onion, red pepper, bleu cheese.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.75</span></span>
+            </div>
           </div>
+
           <div class="menu__item menu__item--featured">
             <div class="menu__item-header">
-              <h3 class="menu__item-name">White Pie</h3>
+              <h3 class="menu__item-name">Round Up</h3>
+              <span class="menu__item-tag">Fan Favorite</span>
+            </div>
+            <p class="menu__item-desc">BBQ sauce, mozzarella, chicken, bacon, red onion, red pepper, drizzled with buffalo sauce.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.75</span></span>
+            </div>
+          </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Buffalo Chicken</h3>
+              <span class="menu__item-tag">Spicy</span>
+            </div>
+            <p class="menu__item-desc">Mozzarella, green pepper, red pepper, chicken drenched in buffalo sauce.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.00</span></span>
+            </div>
+          </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Combo</h3>
+              <span class="menu__item-tag">Meat Lover</span>
+            </div>
+            <p class="menu__item-desc">Marinara, mozzarella, pepperoni, Italian sausage, Canadian bacon.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.75</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$23.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$31.75</span></span>
+            </div>
+          </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Pasta Chicken</h3>
               <span class="menu__item-tag">Chef's Pick</span>
             </div>
-            <p class="menu__item-desc">Garlic-cream base, mozzarella, fresh spinach, and roasted red peppers. Rich, white, and irresistible.</p>
+            <p class="menu__item-desc">Pesto, mozzarella, chicken, artichoke heart, red onion.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.00</span></span>
+            </div>
           </div>
+
           <div class="menu__item menu__item--featured">
             <div class="menu__item-header">
-              <h3 class="menu__item-name">Deluxe Veggie Combo</h3>
+              <h3 class="menu__item-name">Shrimp Alfredo</h3>
+              <span class="menu__item-tag">Seafood</span>
             </div>
-            <p class="menu__item-desc">House sauce loaded with seasonal vegetables and a generous blend of melted cheese.</p>
+            <p class="menu__item-desc">Alfredo, mozzarella, shrimp, broccoli, red onion.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.00</span></span>
+            </div>
           </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Chicken Alfredo</h3>
+            </div>
+            <p class="menu__item-desc">Alfredo, mozzarella, chicken, broccoli, red onion, portabella mushroom.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.75</span></span>
+            </div>
+          </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">BBQ Chicken</h3>
+            </div>
+            <p class="menu__item-desc">Mozzarella, red onion, chicken drenched in BBQ sauce.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$12.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$21.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$28.75</span></span>
+            </div>
+          </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Mediterranean</h3>
+              <span class="menu__item-tag">Vegetarian</span>
+            </div>
+            <p class="menu__item-desc">Marinara, mozzarella, salami, red onion, red pepper, artichoke heart, green olive, feta cheese.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$22.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$30.75</span></span>
+            </div>
+          </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Hawaiian</h3>
+              <span class="menu__item-tag">Classic</span>
+            </div>
+            <p class="menu__item-desc">Marinara, mozzarella, Canadian bacon, pineapple.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$12.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$21.00</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$28.75</span></span>
+            </div>
+          </div>
+
+          <div class="menu__item menu__item--featured">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Deluxe Veggie</h3>
+              <span class="menu__item-tag">Vegetarian</span>
+            </div>
+            <p class="menu__item-desc">Marinara, mozzarella, red pepper, portabella mushroom.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Calzone</span><span class="menu__price-amt">$13.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">12"</span><span class="menu__price-amt">$23.25</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">16"</span><span class="menu__price-amt">$31.75</span></span>
+            </div>
+          </div>
+
           <div class="menu__item menu__item--byo">
             <div class="menu__byo-icon">✦</div>
-            <h3 class="menu__item-name">Build Your Own</h3>
-            <p class="menu__item-desc">Start with your choice of sauce, crust, and cheese — then pile on from our full list of toppings.</p>
-            <a href="tel:8014832120" class="btn btn--small">Call to Build Yours</a>
+            <h3 class="menu__item-name">Design Your Own</h3>
+            <p class="menu__item-desc">Choose your sauce, then pile on toppings. 32 toppings to choose from.</p>
+            <div class="byo-tier-table">
+              <div class="byo-tier-header">
+                <span></span><span>Calzone</span><span>12"</span><span>16"</span>
+              </div>
+              <div class="byo-tier-row"><span>Plain</span><span>$10.75</span><span>$18.25</span><span>$24.50</span></div>
+              <div class="byo-tier-row"><span>1–2 toppings</span><span>$12.50</span><span>$21.00</span><span>$28.75</span></div>
+              <div class="byo-tier-row"><span>3–4 toppings</span><span>$13.00</span><span>$22.00</span><span>$30.00</span></div>
+              <div class="byo-tier-row"><span>5+ toppings</span><span>$13.25</span><span>$23.00</span><span>$31.50</span></div>
+              <div class="byo-tier-row byo-tier-row--note"><span>Each add'l</span><span>+$0.25</span><span>+$0.50</span><span>+$0.75</span></div>
+            </div>
+            <button class="btn btn--small byo-open-btn">Build Your Pizza</button>
           </div>
+
         </div>
       </div>
 
       <!-- Calzones -->
       <div class="menu__panel" id="tab-calzones">
-        <p class="menu__panel-note">All calzones come with marinara dipping sauce on the side.</p>
+        <p class="menu__panel-note">Any pizza on our menu can be ordered as a calzone. See pizza tab for calzone pricing. All calzones served with marinara dipping sauce.</p>
         <div class="menu__grid">
           <div class="menu__item">
-            <h3 class="menu__item-name">Classic Calzone</h3>
-            <p class="menu__item-desc">Ricotta, mozzarella, and your choice of meat or veggie fillings, folded and baked golden.</p>
-          </div>
-          <div class="menu__item">
-            <h3 class="menu__item-name">Meat Lover's Calzone</h3>
-            <p class="menu__item-desc">Packed with pepperoni, sausage, ham, and mozzarella. The full works.</p>
-          </div>
-          <div class="menu__item">
-            <h3 class="menu__item-name">Veggie Calzone</h3>
-            <p class="menu__item-desc">Spinach, mushrooms, roasted red peppers, onions, and ricotta. Hearty without the meat.</p>
+            <h3 class="menu__item-name">Any House Pizza → Calzone</h3>
+            <p class="menu__item-desc">Order any of our 12 house pizzas folded into a calzone. Pricing shown on the Pizzas tab — calzone prices start at $12.50.</p>
           </div>
           <div class="menu__item menu__item--byo">
             <div class="menu__byo-icon">✦</div>
-            <h3 class="menu__item-name">Build Your Own Calzone</h3>
-            <p class="menu__item-desc">Mix and match your fillings from our full topping list. Ask your server or call ahead.</p>
-            <a href="tel:8014832120" class="btn btn--small">Call to Build Yours</a>
+            <h3 class="menu__item-name">Design Your Own Calzone</h3>
+            <p class="menu__item-desc">Choose your sauce, fillings, and toppings. Plain starts at $10.75 — pricing tiers match the pizza builder.</p>
+            <button class="btn btn--small byo-open-btn">Build Your Calzone</button>
           </div>
         </div>
       </div>
@@ -246,7 +422,12 @@
               <h3 class="menu__item-name">Lasagna</h3>
               <span class="menu__item-tag">Fan Favorite</span>
             </div>
-            <p class="menu__item-desc">Layers of housemade meat sauce, ricotta, mozzarella, and pasta — baked until bubbling and golden. Served with garlic bread.</p>
+            <p class="menu__item-desc">Pasta layered with ricotta and mozzarella cheese, red onion, red pepper, spinach, zucchini, marinara. <br>Add chicken, sausage, or meatball +$0.50.</p>
+            <div class="menu__item-prices">
+              <span class="menu__price-group"><span class="menu__price-size">Plain</span><span class="menu__price-amt">$13.50</span></span>
+              <span class="menu__price-div">·</span>
+              <span class="menu__price-group"><span class="menu__price-size">With Meat</span><span class="menu__price-amt">$14.00</span></span>
+            </div>
           </div>
         </div>
       </div>
@@ -254,12 +435,83 @@
       <!-- Desserts -->
       <div class="menu__panel" id="tab-desserts">
         <div class="menu__grid">
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Ice Cream</h3>
+              <span class="menu__item-price">$5.75</span>
+            </div>
+            <p class="menu__item-desc">Scoops of vanilla. A simple, sweet finish.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Root Beer Float</h3>
+              <span class="menu__item-price">$6.25</span>
+            </div>
+            <p class="menu__item-desc">Classic root beer float — cold and creamy.</p>
+          </div>
           <div class="menu__item menu__item--featured">
             <div class="menu__item-header">
-              <h3 class="menu__item-name">Cheesecake</h3>
-              <span class="menu__item-tag">House Made</span>
+              <h3 class="menu__item-name">New York Style Cheesecake</h3>
+              <span class="menu__item-price">$6.25</span>
             </div>
-            <p class="menu__item-desc">Rich, creamy cheesecake on a buttery graham cracker crust. The perfect finish. Ask your server for today's flavor.</p>
+            <p class="menu__item-desc">Rich, creamy New York style cheesecake. The perfect finish to any meal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beverages -->
+      <div class="menu__panel" id="tab-beverages">
+        <div class="menu__grid">
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Bottled Water</h3>
+              <span class="menu__item-price">$2.50</span>
+            </div>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Soda</h3>
+              <span class="menu__item-price">$3.75</span>
+            </div>
+            <p class="menu__item-desc">Pepsi, Wild Cherry Pepsi, Diet Pepsi, Dr. Pepper, Mountain Dew, Starry, Root Beer.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Lemonade / Fresh Brewed Iced Tea</h3>
+              <span class="menu__item-price">$3.75</span>
+            </div>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Orange Juice / Apple Juice</h3>
+              <span class="menu__item-price">$3.75</span>
+            </div>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Hot Cocoa / Hot Tea / Coffee</h3>
+              <span class="menu__item-price">$3.75</span>
+            </div>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Canned Beer</h3>
+              <span class="menu__item-price">$6.00</span>
+            </div>
+            <p class="menu__item-desc">Bohemian Cherry Buck, Squatters Juicy Joe, Bud Light, Coors Light.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Draft Beer</h3>
+              <span class="menu__item-price">$5.00</span>
+            </div>
+            <p class="menu__item-desc">Uinta Cutthroat, Uinta Hefeweizen.</p>
+          </div>
+          <div class="menu__item">
+            <div class="menu__item-header">
+              <h3 class="menu__item-name">Pitcher</h3>
+              <span class="menu__item-price">$19.75</span>
+            </div>
           </div>
         </div>
       </div>
@@ -331,6 +583,11 @@
             <h3 class="contact__card-title">Call Us</h3>
             <p class="contact__card-value">(801) 483-2120</p>
           </a>
+          <a href="mailto:rustedsunpizzeriainc@gmail.com" class="contact__card">
+            <div class="contact__card-icon">✉</div>
+            <h3 class="contact__card-title">Email Us</h3>
+            <p class="contact__card-value">rustedsunpizzeriainc<br />@gmail.com</p>
+          </a>
           <div class="contact__card">
             <div class="contact__card-icon">📍</div>
             <h3 class="contact__card-title">Find Us</h3>
@@ -369,6 +626,7 @@
         <div class="footer__contact">
           <h4 class="footer__heading">Contact</h4>
           <p><a href="tel:8014832120">(801) 483-2120</a></p>
+          <p><a href="mailto:rustedsunpizzeriainc@gmail.com">rustedsunpizzeriainc@gmail.com</a></p>
           <p>2010 S State St<br />Salt Lake City, UT 84115</p>
         </div>
       </div>
@@ -377,6 +635,135 @@
       </div>
     </div>
   </footer>
+
+  <!-- ========== BUILD YOUR OWN PIZZA MODAL ========== -->
+  <div class="byo-modal" id="byoModal" role="dialog" aria-modal="true" aria-labelledby="byoModalTitle">
+    <div class="byo-modal__backdrop" id="byoModalBackdrop"></div>
+    <div class="byo-modal__panel">
+      <button class="byo-modal__close" id="byoModalClose" aria-label="Close pizza builder">&times;</button>
+      <div class="byo-modal__header">
+        <div class="byo-modal__icon">✦</div>
+        <h2 class="byo-modal__title" id="byoModalTitle">Build Your Pizza</h2>
+        <p class="byo-modal__sub">Pick your size, sauce, and toppings — then call us to order.</p>
+      </div>
+      <div class="byo-modal__body">
+
+        <!-- Size -->
+        <div class="byo-section">
+          <h3 class="byo-section__title">Size</h3>
+          <div class="byo-options">
+            <label class="byo-option">
+              <input type="radio" name="byo-size" value='Personal (8")'>
+              <span class="byo-option__inner">
+                <span class="byo-option__name">Personal</span>
+                <span class="byo-option__detail">8 inches</span>
+              </span>
+            </label>
+            <label class="byo-option">
+              <input type="radio" name="byo-size" value='Medium (12")' checked>
+              <span class="byo-option__inner">
+                <span class="byo-option__name">Medium</span>
+                <span class="byo-option__detail">12 inches</span>
+              </span>
+            </label>
+            <label class="byo-option">
+              <input type="radio" name="byo-size" value='Large (16")'>
+              <span class="byo-option__inner">
+                <span class="byo-option__name">Large</span>
+                <span class="byo-option__detail">16 inches</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Sauce -->
+        <div class="byo-section">
+          <h3 class="byo-section__title">Sauce</h3>
+          <div class="byo-options">
+            <label class="byo-option"><input type="radio" name="byo-sauce" value="Marinara" checked><span class="byo-option__inner"><span class="byo-option__name">Marinara</span></span></label>
+            <label class="byo-option"><input type="radio" name="byo-sauce" value="BBQ"><span class="byo-option__inner"><span class="byo-option__name">BBQ</span></span></label>
+            <label class="byo-option"><input type="radio" name="byo-sauce" value="Buffalo Style"><span class="byo-option__inner"><span class="byo-option__name">Buffalo Style</span></span></label>
+            <label class="byo-option"><input type="radio" name="byo-sauce" value="Alfredo"><span class="byo-option__inner"><span class="byo-option__name">Alfredo</span></span></label>
+            <label class="byo-option"><input type="radio" name="byo-sauce" value="Pesto"><span class="byo-option__inner"><span class="byo-option__name">Pesto</span></span></label>
+            <label class="byo-option"><input type="radio" name="byo-sauce" value="Olive Oil"><span class="byo-option__inner"><span class="byo-option__name">Olive Oil</span></span></label>
+          </div>
+        </div>
+
+        <!-- Cheese -->
+        <div class="byo-section">
+          <h3 class="byo-section__title">Cheese <span class="byo-section__note">Mozzarella always included</span></h3>
+          <div class="byo-options">
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Extra Mozzarella"><span class="byo-option__inner"><span class="byo-option__name">Extra Mozzarella</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Ricotta"><span class="byo-option__inner"><span class="byo-option__name">Ricotta</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Feta"><span class="byo-option__inner"><span class="byo-option__name">Feta</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Bleu Cheese"><span class="byo-option__inner"><span class="byo-option__name">Bleu Cheese</span></span></label>
+          </div>
+        </div>
+
+        <!-- Meats -->
+        <div class="byo-section">
+          <h3 class="byo-section__title">Meats</h3>
+          <div class="byo-options">
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Pepperoni"><span class="byo-option__inner"><span class="byo-option__name">Pepperoni</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Italian Sausage"><span class="byo-option__inner"><span class="byo-option__name">Italian Sausage</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Salami"><span class="byo-option__inner"><span class="byo-option__name">Salami</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Meatball"><span class="byo-option__inner"><span class="byo-option__name">Meatball</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Canadian Bacon"><span class="byo-option__inner"><span class="byo-option__name">Canadian Bacon</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Bacon"><span class="byo-option__inner"><span class="byo-option__name">Bacon</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Chicken"><span class="byo-option__inner"><span class="byo-option__name">Chicken</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Anchovies"><span class="byo-option__inner"><span class="byo-option__name">Anchovies</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Shrimp"><span class="byo-option__inner"><span class="byo-option__name">Shrimp</span></span></label>
+          </div>
+        </div>
+
+        <!-- Vegetables -->
+        <div class="byo-section">
+          <h3 class="byo-section__title">Vegetables</h3>
+          <div class="byo-options">
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Red Onion"><span class="byo-option__inner"><span class="byo-option__name">Red Onion</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Green Pepper"><span class="byo-option__inner"><span class="byo-option__name">Green Pepper</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Red Pepper"><span class="byo-option__inner"><span class="byo-option__name">Red Pepper</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Jalapeño"><span class="byo-option__inner"><span class="byo-option__name">Jalapeño</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Black Olive"><span class="byo-option__inner"><span class="byo-option__name">Black Olive</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Green Olive"><span class="byo-option__inner"><span class="byo-option__name">Green Olive</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Kalamata Olive"><span class="byo-option__inner"><span class="byo-option__name">Kalamata Olive</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Mushroom"><span class="byo-option__inner"><span class="byo-option__name">Mushroom</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Portabella Mushroom"><span class="byo-option__inner"><span class="byo-option__name">Portabella</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Fresh Tomato"><span class="byo-option__inner"><span class="byo-option__name">Fresh Tomato</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Sun Dried Tomato"><span class="byo-option__inner"><span class="byo-option__name">Sun Dried Tomato</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Pineapple"><span class="byo-option__inner"><span class="byo-option__name">Pineapple</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Spinach"><span class="byo-option__inner"><span class="byo-option__name">Spinach</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Fresh Basil"><span class="byo-option__inner"><span class="byo-option__name">Fresh Basil</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Broccoli"><span class="byo-option__inner"><span class="byo-option__name">Broccoli</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Zucchini"><span class="byo-option__inner"><span class="byo-option__name">Zucchini</span></span></label>
+          </div>
+        </div>
+
+        <!-- Specialty -->
+        <div class="byo-section">
+          <h3 class="byo-section__title">Specialty</h3>
+          <div class="byo-options">
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Minced Fresh Garlic"><span class="byo-option__inner"><span class="byo-option__name">Minced Garlic</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Roasted Garlic"><span class="byo-option__inner"><span class="byo-option__name">Roasted Garlic</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Capers"><span class="byo-option__inner"><span class="byo-option__name">Capers</span></span></label>
+            <label class="byo-option"><input type="checkbox" name="byo-topping" value="Artichoke Heart"><span class="byo-option__inner"><span class="byo-option__name">Artichoke Heart</span></span></label>
+          </div>
+        </div>
+
+      </div><!-- /byo-modal__body -->
+
+      <div class="byo-modal__footer">
+        <div class="byo-summary">
+          <p class="byo-summary__label">Your Pizza</p>
+          <p class="byo-summary__text" id="byoSummaryText">Medium (12") · Marinara · Mozzarella</p>
+        </div>
+        <a href="tel:8014832120" class="btn btn--primary byo-modal__cta">
+          Call to Order
+        </a>
+      </div>
+
+    </div><!-- /byo-modal__panel -->
+  </div><!-- /byo-modal -->
 
   <script src="script.js"></script>
 </body>
