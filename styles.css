@@ -303,6 +303,27 @@ img { max-width: 100%; display: block; }
 }
 
 /* =============================================
+   PULL QUOTE
+   ============================================= */
+.pullquote {
+  background: var(--color-accent);
+  padding: 36px 0;
+}
+.pullquote__text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  line-height: 1.5;
+  max-width: 820px;
+  margin: 0 auto;
+  quotes: "\201C" "\201D";
+}
+.pullquote__text::before { content: open-quote; }
+.pullquote__text::after  { content: close-quote; }
+
+/* =============================================
    ABOUT
    ============================================= */
 .about {
