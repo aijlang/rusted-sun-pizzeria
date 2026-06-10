@@ -26,7 +26,13 @@ tabs.forEach(tab => {
     tabs.forEach(t => t.classList.remove('menu__tab--active'));
     panels.forEach(p => p.classList.remove('menu__panel--active'));
     tab.classList.add('menu__tab--active');
-    document.getElementById(`tab-${tab.dataset.tab}`).classList.add('menu__panel--active');
+    const activePanel = document.getElementById(`tab-${tab.dataset.tab}`);
+    activePanel.classList.add('menu__panel--active');
+    // Ensure any items in this panel that were hidden by the scroll observer become visible
+    activePanel.querySelectorAll('.menu__item').forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    });
   });
 });
 
@@ -59,7 +65,7 @@ document.getElementById('byoModalBackdrop').addEventListener('click', closeByoMo
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeByoModal(); });
 byoModal.querySelectorAll('input').forEach(input => input.addEventListener('change', updateByoSummary));
 
-// Fade-in on scroll
+// Fade-in on scroll (only for items already visible in the active panel)
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -69,7 +75,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.menu__item, .contact__card, .hours__row').forEach(el => {
+document.querySelectorAll('.menu__panel--active .menu__item, .contact__card, .hours__row').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(16px)';
   el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
