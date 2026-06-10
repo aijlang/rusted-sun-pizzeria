@@ -315,6 +315,14 @@ img { max-width: 100%; display: block; }
   gap: 80px;
   align-items: center;
 }
+.about__founded {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: 20px;
+}
 .about__body {
   color: var(--color-text-muted);
   margin-bottom: 20px;
