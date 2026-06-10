@@ -215,7 +215,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background: url('images/pizza-hero.webp') center center / cover no-repeat;
-  opacity: 0.30;
+  opacity: 0.20;
   pointer-events: none;
   z-index: 0;
 }
@@ -517,6 +517,108 @@ img { max-width: 100%; display: block; }
   font-size: 1.5rem;
   color: var(--color-accent);
   margin-bottom: 8px;
+}
+
+/* BYO expanded static card */
+.menu__item--byo-expanded {
+  grid-column: 1 / -1;
+  text-align: left;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.byo-expanded__header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.byo-expanded__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.byo-expanded__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.byo-expanded__note {
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-text-muted);
+}
+.byo-expanded__group { margin-bottom: 20px; }
+.byo-expanded__group:last-child { margin-bottom: 0; }
+.byo-expanded__sauce {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+.byo-expanded__toppings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 16px;
+}
+.byo-expanded__toppings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.byo-expanded__toppings li {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  line-height: 1.4;
+}
+.byo-expanded__right {
+  border-top: 1px solid var(--color-border);
+  padding-top: 20px;
+}
+.byo-expanded__right .byo-tier-table {
+  margin-top: 12px;
+  width: 100%;
+}
+.byo-expanded__right .byo-tier-header,
+.byo-expanded__right .byo-tier-row {
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 8px 4px;
+}
+.byo-expanded__right .byo-tier-header span:not(:first-child) {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.pizza-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+.byo-slice-note {
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+.byo-expanded__right .byo-tier-row {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.byo-expanded__right .byo-tier-row:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .byo-expanded__body { grid-template-columns: 1fr; }
+  .byo-expanded__toppings { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Menu item with photo */
