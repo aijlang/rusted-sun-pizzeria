@@ -215,7 +215,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: 0;
   background: url('images/pizza-hero.webp') center center / cover no-repeat;
-  opacity: 0.18;
+  opacity: 0.30;
   pointer-events: none;
   z-index: 0;
 }
