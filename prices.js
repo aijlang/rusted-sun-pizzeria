@@ -13,7 +13,7 @@
 const PRICES = {
 
   // ── STARTERS ──────────────────────────────────────────────────
-  buffaloChicken_app:           10.50,
+  buffaloChicken_app:           11.50,
   killerCheeseDip:              11.50,
   garlicBreadStix:               9.25,
   breadStixMozzarella:          10.25,
