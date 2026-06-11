@@ -96,7 +96,7 @@ const MENU = {
   //  Add photo:  photo: "images/filename.webp"   (optional)
   // ══════════════════════════════════════════════════════════════════
   starters: [
-    { name: "Buffalo Chicken",           price: 11.50, desc: "Boneless skinless chicken and jalapeños drenched in buffalo sauce (not wings)." },
+    { name: "Buffalo Chicken",           price: 10.50, desc: "Boneless skinless chicken and jalapeños drenched in buffalo sauce (not wings)." },
     { name: "Killer Cheese Dip",         price: 11.50, desc: "Artichoke heart, sun-dried tomato, spinach, and three cheeses — served with bread stix." },
     { name: "Garlic Bread Stix & Sauce", price:  9.25, desc: "Warm housemade garlic bread sticks with marinara dipping sauce." },
     { name: "Bread Stix with Mozzarella", price: 10.25, desc: "Our housemade bread sticks topped with melted mozzarella cheese, served with marinara dipping sauce.", photo: "images/breadstix-mozzarella.webp" },
