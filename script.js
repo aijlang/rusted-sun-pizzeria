@@ -1,3 +1,14 @@
+// Inject prices from prices.js
+if (typeof PRICES !== 'undefined') {
+  document.querySelectorAll('[data-price]').forEach(el => {
+    const key = el.dataset.price;
+    if (PRICES[key] !== undefined) {
+      const prefix = el.dataset.pricePrefix || '';
+      el.textContent = prefix + '$' + PRICES[key].toFixed(2);
+    }
+  });
+}
+
 // Sticky nav
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
